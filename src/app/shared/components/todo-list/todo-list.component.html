@@ -1,0 +1,21 @@
+<mat-card *ngIf="getTodosArr.length > 0; else : noTodo">
+    <mat-card-title>Todo List</mat-card-title>
+    <mat-card-content>
+        <ul class="list-group">
+            <li class="list-group-item d-flex justify-content-between align-items-center" *ngFor="let todo of getTodosArr; trackBy: trackByTodoID">
+                <strong>{{todo.todoItem}}</strong>
+                <div>
+                    <button
+                    (click)="onEdit(todo)"
+                     class="mr-2 btn btn-primary">Edit</button>
+                    <button
+                    (click)="onRemoveTodo(todo.todoID)"
+                     class="btn btn-danger">Remove</button>
+                </div>
+            </li>
+        </ul>
+    </mat-card-content>
+</mat-card>
+<ng-template #noTodo>
+    <p class="alert alert-danger">No Todos added yet!!!</p>
+</ng-template>
