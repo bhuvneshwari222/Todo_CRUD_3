@@ -34,8 +34,8 @@
              class="text-danger">isCompleted is required field</strong>
             </div>
 
-            <button type="submit"  *ngIf="!isInEditMode" class="btn btn-primary btn-block">Add Todo</button>
-            <button  type="button" (click)="updateTodo()" *ngIf="isInEditMode" class="btn btn-primary btn-block">Update Todo</button>
+            <button type="submit"  *ngIf="!isInEditMode" class="btn btn-primary btn-block btn-sm">Add Todo</button>
+            <button  type="button" (click)="updateTodo()" *ngIf="isInEditMode" class="btn btn-primary btn-block btn-sm">Update Todo</button>
         </form>
     </mat-card-content>
 </mat-card>
