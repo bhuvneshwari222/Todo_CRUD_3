@@ -3,7 +3,8 @@
     <mat-card-content>
         <ul class="list-group">
             <li class="list-group-item d-flex justify-content-between align-items-center" *ngFor="let todo of getTodosArr; trackBy: trackByTodoID">
-                <strong>{{todo.todoItem}}</strong>
+                
+                    <mat-checkbox [checked]="todo.isCompleted"><strong>{{todo.todoItem}}</strong></mat-checkbox>
                 <div>
                     <button
                     (click)="onEdit(todo)"
